@@ -1,11 +1,15 @@
+# following Corey Schafer Python Flask Tutorials
+
 from flask import Flask
 app = Flask(__name__)
 
 
-#app.route are decorators will handle complicated backend stuff
+# app.route are decorators will handle complicated backend stuff
 @app.route('/')
-def hello_world():
+@app.route('/home')
+def home():
     return '<h1>Home Page</h1>'
+
 
 @app.route('/about')
 def about():
